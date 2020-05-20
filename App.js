@@ -3,12 +3,13 @@ import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
 import Setting from './screens/Setting';
 import MessageChat from './screens/MessageChat';
 import Profile from './screens/Profile';
+import EachMessageChat from './screens/EachMessageChat';
 
 export default class App extends Component{
   render(){   
     return (  
       <View>  
-        <Setting/>
+        <EachMessageChat/>
       </View> 
     );
   }  
