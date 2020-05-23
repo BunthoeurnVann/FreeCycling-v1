@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
+import Home from './Home';
+import Setting from './Setting';
 export default class Post extends Component {
     render() {
         return (

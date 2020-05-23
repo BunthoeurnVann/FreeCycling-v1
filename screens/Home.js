@@ -7,6 +7,7 @@ import Profile from './Profile';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MessageChat from './MessageChat';
 import Post from './Post';
+import Setting from './Setting';
 class Home extends Component {
   render() {
     return (
@@ -30,7 +31,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <View>
-            <Icon style={[{ color: tintColor }]} name={'ios-home'} size={25} />
+            <Icon style={[{ color: tintColor }]} name={''} size={25} />
           </View>
         ),
       }
@@ -40,7 +41,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <View>
-            <Icon style={[{ color: tintColor }]} name={'ios-home'} size={25} />
+            <Icon style={[{ color: tintColor }]} name={''} size={25} />
           </View>
         ),
         activeColor: '#ffffff',
@@ -53,7 +54,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <View>
-            <Icon style={[{ color: tintColor }]} name={'ios-home'} size={25} />
+            <Icon style={[{ color: tintColor }]} name={''} size={25} />
           </View>
         ),
         activeColor: '#ffffff',
@@ -66,7 +67,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <View>
-            <Icon style={[{ color: tintColor }]} name={'ios-home'} size={25} />
+            <Icon style={[{ color: tintColor }]} name={''} size={25} />
           </View>
         ),
         activeColor: '#ffffff',
@@ -79,7 +80,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <View>
-            <Icon style={[{ color: tintColor }]} name={'ios-person'} size={25} />
+            <Icon style={[{ color: tintColor }]} name={'rocket'} size={25} />
           </View>
         ),
         activeColor: '#ffffff',

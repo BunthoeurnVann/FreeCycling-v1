@@ -7,7 +7,7 @@ export default class Setting extends Component{
       <View>
         <ScrollView> 
         <View style={styles.headerBar}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Profile')}>
         <Image style={{height: 30, width: 30, justifyContent: "center", marginLeft: 15}}
           source={require('./images/backarrow.png')}
           />

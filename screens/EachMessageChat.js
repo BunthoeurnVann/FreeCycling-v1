@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Image, Text, StyleSheet, ScrollView, FlatList } from 'react-native';
+import { View, TouchableOpacity, Image, Text, StyleSheet, ScrollView, FlatList, TextInput } from 'react-native';
 export default class EachMessageChat extends Component {
     state = {
         people: [
@@ -12,7 +12,7 @@ export default class EachMessageChat extends Component {
         return (
             <View>
                 <View style={styles.headerBar}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('MessageChat')}>
                         <Image style={{ height: 30, width: 30, justifyContent: "center", marginLeft: 15 }}
                             source={require('./images/backarrow.png')}
                         />
@@ -50,10 +50,10 @@ export default class EachMessageChat extends Component {
                                         </View>
                                         <View>
                                             <View>
-                                            <Text style={styles.itemDate}>{item.date1}</Text>
+                                                <Text style={styles.itemDate}>{item.date1}</Text>
                                             </View>
                                             <View>
-                                            <Text style={styles.itemTitle1}>{item.title1}</Text>
+                                                <Text style={styles.itemTitle1}>{item.title1}</Text>
                                                 <Text style={styles.itemTitle1}>{item.title2}</Text>
                                             </View>
                                         </View>
@@ -61,6 +61,14 @@ export default class EachMessageChat extends Component {
                                 </View>
                             )}
                         />
+                        <View style={styles.sendMessage}>
+                            <TextInput style={styles.inputSearch} placeholder="Send a message" />
+                            <TouchableOpacity>
+                                <Image style={{ height: 36, width: 36, marginTop: 20, marginRight: 22 }}
+                                    source={require('./images/send.png')}
+                                />
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 </ScrollView>
             </View>
@@ -117,13 +125,31 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         fontSize: 13
     },
-    itemTitle:{
+    itemTitle: {
         fontFamily: 'Montserrat',
         fontSize: 14
     },
-    itemTitle1:{
+    itemTitle1: {
         fontFamily: 'Montserrat',
         fontSize: 14,
         backgroundColor: '#B14297'
+    },
+    inputSearch: {
+        height: 36,
+        borderRadius: 17,
+        borderColor: '#707070',
+        fontFamily: 'Montserrat',
+        paddingHorizontal: 20,
+        justifyContent: "center",
+        borderWidth: 1,
+        flex: 1,
+        marginLeft: 20,
+        marginBottom: 20,
+        marginRight: 5,
+        marginTop: 20
+    },
+    sendMessage: {
+        marginBottom: 60,
+        flexDirection: "row"
     }
 });  

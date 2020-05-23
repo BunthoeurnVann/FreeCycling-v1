@@ -1,7 +1,9 @@
 import React, { Component } from 'react';  
 import {Platform, StyleSheet, Text, View, TextInput, FlatList, TouchableOpacity, ScrollView} from 'react-native';  
-
-export default class MessageChat extends Component{ 
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import EachMessageChat from './EachMessageChat';
+class MessageChat extends Component{ 
   state = { people: [
     { name: 'emelie johnson', date: '10 Apr 2020', title: 'I love you', image: "https://post.healthline.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg", id: '1'},
     { name: 'Monaco Runka', date: '03 Jan 2019', title: 'Hate you so much', image: "https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/dogs_1280p_0.jpg?itok=cnRk0HYq", id: '2'},
@@ -28,7 +30,7 @@ export default class MessageChat extends Component{
           keyExtractor = {(item)=>item.id}
           data = {this.state.people}
           renderItem={({ item }) =>(
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('EachMessageChat')}>
             <View style={styles.container}>
               <View>
           <Text style={styles.itemName}>{item.name}</Text>
@@ -92,4 +94,24 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: '#707070'
   }
-});  
+});
+const AppNavigator = createStackNavigator(  
+  { 
+      MessageChat:{
+        screen: MessageChat,
+        navigationOptions:{
+          header: null,
+        }
+      },
+      EachMessageChat:{
+        screen: EachMessageChat,
+        navigationOptions:{
+          header: null
+        }
+      }
+  },  
+  {  
+      initialRouteName: "MessageChat"  
+  }  
+);    
+export default createAppContainer(AppNavigator);

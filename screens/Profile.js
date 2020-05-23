@@ -1,7 +1,9 @@
 import React, {Component} from 'react';  
-import {Platform, StyleSheet, Text, View, TouchableOpacity, Image, FlatList, ScrollView} from 'react-native';  
-
-export default class Profile extends Component{ 
+import {Platform, StyleSheet, Text, View, TouchableOpacity, Image, FlatList, ScrollView} from 'react-native'; 
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import Setting from './Setting';
+class Profile extends Component{ 
   state = { people: [
     { name: 'Iron-Man', date: '10 Apr 2020', type: 'Offer', category: 'IT Information',tag:' ', title: 'The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore.', image: "https://post.healthline.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg", id: '1'},
     { name: 'Spider-Man', date: '10 Apr 2020', category: 'Trasportation', type: 'Request', tag:'Mark as taken', title: 'The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore.', image: "https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/dogs_1280p_0.jpg?itok=cnRk0HYq", id: '2'},
@@ -24,7 +26,7 @@ export default class Profile extends Component{
             <Text style={{paddingLeft: 5}}>Cambodia</Text>
           </View>
         </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Setting')}>
           <Image
           style={{height:37, width: 37}}
           source={require('../images/interface.png')}
@@ -192,4 +194,24 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     fontSize: 11
   }
-});  
+});
+const AppNavigator = createStackNavigator(  
+  { 
+      Profile:{
+        screen: Profile,
+        navigationOptions:{
+          header: null,
+        }
+      },
+      Setting:{
+        screen:Setting,
+        navigationOptions:{
+          header: null
+        }
+      }
+  },  
+  {  
+      initialRouteName: "Profile"  
+  }  
+);    
+export default createAppContainer(AppNavigator);
