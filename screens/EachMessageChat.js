@@ -5,12 +5,12 @@ export default class EachMessageChat extends Component {
         people: [
             { name: 'emelie johnson', date: '10 Apr 2020', title: 'I love you', nextTitle: '', nextTitle1: '', date1: '12 Jun 2020', title1: 'Feeling hgvgvgvgg', title2: 'Spleepy', id: '1' },
             { name: 'emelie johnson', date: '10 Apr 2020', title: 'I love you', nextTitle: '', nextTitle1: '', date1: '12 Jun 2020', title1: 'Feeling hgvgvgvgg', title2: 'Spleepy', id: '2' },
-            { name: 'emelie johnson', date: '10 Apr 2020', title: 'I love you', nextTitle: 'Hey you bad guy My friend bit bot ', nextTitle1: 'Boom my godda mana', date1: '12 Jun 2020', title1: 'Feeling hgvgvgvgg', title2: 'Spleepy', id: '1' },
+            { name: 'emelie johnson', date: '10 Apr 2020', title: 'I love you', nextTitle: 'Hey you bad guy My friend bit bot ', nextTitle1: 'Boom my godda mana', date1: '12 Jun 2020', title1: 'Feeling hgvgvgvgg', title2: 'Spleepy', id: '3' },
         ]
     }
     render() {
         return (
-            <View>
+            <View style={{marginBottom: 510}}>
                 <View style={styles.headerBar}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('MessageChat')}>
                         <Image style={{ height: 30, width: 30, justifyContent: "center", marginLeft: 15 }}
@@ -19,15 +19,14 @@ export default class EachMessageChat extends Component {
                     </TouchableOpacity>
                     <Text style={styles.textHeader}>MaDaKac</Text>
                 </View>
-                <ScrollView>
                     <View>
                         <View style={styles.container}>
                             <View style={styles.settingRegion}>
                                 <Text style={styles.textName}>xxjoanne</Text>
                                 <View style={styles.regionText}>
-                                    <Text>Phnom Penh</Text>
+                                    <Text style={{fontSize: 13, fontFamily: 'Montserrat-Regular'}}>Phnom Penh</Text>
                                     <Text>,</Text>
-                                    <Text style={{ paddingLeft: 5 }}>Cambodia</Text>
+                                    <Text style={{ paddingLeft: 5, fontSize: 13, fontFamily: 'Montserrat-Regular'}}>Cambodia</Text>
                                 </View>
                             </View>
                         </View>
@@ -70,7 +69,6 @@ export default class EachMessageChat extends Component {
                             </TouchableOpacity>
                         </View>
                     </View>
-                </ScrollView>
             </View>
         );
     }
@@ -80,8 +78,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: 'center',
         margin: 10,
-        fontWeight: "bold",
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Bold',
         color: '#ffffff',
         flexGrow: 1,
         marginRight: 50
@@ -93,9 +90,7 @@ const styles = StyleSheet.create({
         flexDirection: "row"
     },
     regionText: {
-        fontFamily: 'Montserrat',
         flexDirection: "row",
-        fontSize: 13
     },
     container: {
         paddingLeft: 20,
@@ -103,34 +98,30 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     textName: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Bold',
         fontSize: 20,
-        fontWeight: "bold",
         marginTop: 20,
         marginBottom: 5
     },
     itemName: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Bold',
         fontSize: 16,
-        fontWeight: "bold",
         marginBottom: 5
     },
     itemDate: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
         fontSize: 11,
         marginBottom: 5
     },
     regionText: {
-        fontFamily: 'Montserrat',
         flexDirection: "row",
-        fontSize: 13
     },
     itemTitle: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
         fontSize: 14
     },
     itemTitle1: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
         fontSize: 14,
         backgroundColor: '#B14297'
     },
@@ -138,7 +129,7 @@ const styles = StyleSheet.create({
         height: 36,
         borderRadius: 17,
         borderColor: '#707070',
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
         paddingHorizontal: 20,
         justifyContent: "center",
         borderWidth: 1,

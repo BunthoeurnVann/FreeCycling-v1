@@ -17,9 +17,9 @@ export default class Setting extends Component{
         <View style={styles.container}>
         <Text style={styles.textName}>xxjoanne</Text>
           <View style={styles.regionText}>
-            <Text>Phnom Penh</Text>
+            <Text style={{fontSize: 13, fontFamily: 'Montserrat-Regular'}}>Phnom Penh</Text>
             <Text>,</Text>
-            <Text style={{paddingLeft: 5}}>Cambodia</Text>
+            <Text style={{paddingLeft: 5, fontSize: 13, fontFamily: 'Montserrat-Regular'}}>Cambodia</Text>
           </View>
         <Text style={styles.textName}>Account setting</Text>
         <View style={styles.itemChange}>
@@ -88,8 +88,7 @@ const styles = StyleSheet.create({
     fontSize: 25,  
     textAlign: 'center',  
     margin: 10,
-    fontWeight: "bold",
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     color: '#ffffff',
     flexGrow: 1,
     marginRight: 50
@@ -105,15 +104,12 @@ const styles = StyleSheet.create({
     paddingRight:20
   },
   textName:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 20,
-    fontWeight: "bold",
     marginTop: 30
   },
   regionText:{
-    fontFamily: 'Montserrat',
     flexDirection: "row",
-    fontSize: 13
   },
   itemChange:{
     marginBottom: 30,
@@ -121,7 +117,7 @@ const styles = StyleSheet.create({
   },
   changeType:{
     marginBottom: 5,
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Regular',
     fontSize: 20,
     flex:1
   },
@@ -139,9 +135,8 @@ const styles = StyleSheet.create({
     marginBottom: 30
   },
   textButton:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 17,
-    fontWeight: "bold",
     color: '#B14297'
   }
 });  

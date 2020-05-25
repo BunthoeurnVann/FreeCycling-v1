@@ -9,10 +9,11 @@ class Profile extends Component{
     { name: 'Spider-Man', date: '10 Apr 2020', category: 'Trasportation', type: 'Request', tag:'Mark as taken', title: 'The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore.', image: "https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/dogs_1280p_0.jpg?itok=cnRk0HYq", id: '2'},
     { name: 'Iron-Man', date: '10 Apr 2020', type: 'Offer', category: 'IT Information', tag:'Mark as taken', title: 'The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore.', image: "https://post.healthline.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg", id: '3'},
     { name: 'Iron-Man', date: '10 Apr 2020', type: 'Offer', category: 'IT Information', tag:' ', title: 'The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore.', image: "https://post.healthline.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg", id: '4'},
+    { name: 'Iron-Man', date: '10 Apr 2020', type: 'Offer', category: 'IT Information', tag:' ', title: 'The dog is a member of the genus Canis, which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore.', image: "https://post.healthline.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg", id: '5'},
  ]}
   render(){
     return (  
-      <View> 
+      <View style={{marginBottom: 460}}> 
         <View style={styles.headerBar}>
           <Text style={styles.textHeader}>Profile</Text>
         </View>
@@ -21,32 +22,31 @@ class Profile extends Component{
         <View style={{ flex: 1}}>
           <Text style={styles.textName}>xxjoanne</Text>
           <View style={styles.regionText}>
-            <Text>Phnom Penh</Text>
+            <Text style={{fontSize: 13, fontFamily: 'Montserrat-Regular'}}>Phnom Penh</Text>
             <Text>,</Text>
-            <Text style={{paddingLeft: 5}}>Cambodia</Text>
+            <Text style={{paddingLeft: 5, fontSize: 13, fontFamily: 'Montserrat-Regular'}}>Cambodia</Text>
           </View>
         </View>
         <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Setting')}>
           <Image
           style={{height:37, width: 37}}
-          source={require('../images/interface.png')}
+          source={require('./images/settings.png')}
           />
         </TouchableOpacity>
         </View>
         </View>
-        <ScrollView>
         <View style={styles.container1}>
         <View style={styles.post}>
           <View style={{flex: 1}}>
-            <Text style={{fontSize: 30, fontFamily: 'Montserrat', color: '#B14297', fontWeight: "bold", paddingLeft: 15}}>70</Text>
+            <Text style={{fontSize: 30, fontFamily: 'Montserrat-Bold', color: '#B14297', paddingLeft: 15}}>70</Text>
             <Text style={styles.typePost}>Total Posts</Text>
           </View>
           <View style={{flex:1}}>
-            <Text style={{fontSize: 30, fontFamily: 'Montserrat', color: '#F7C217', fontWeight: "bold"}}>54</Text>
+            <Text style={{fontSize: 30, fontFamily: 'Montserrat-Bold', color: '#F7C217'}}>54</Text>
             <Text style={styles.typePost}>Offers</Text>
           </View>
           <View>
-            <Text style={{fontSize: 30, fontFamily: 'Montserrat', color: '#8DB9BF', fontWeight: "bold", paddingLeft: 6}}>16</Text>
+            <Text style={{fontSize: 30, fontFamily: 'Montserrat-Bold', color: '#8DB9BF', paddingLeft: 6}}>16</Text>
             <Text style={styles.typePost}>Request</Text>
           </View>
         </View>
@@ -70,7 +70,7 @@ class Profile extends Component{
                   <Text style={styles.editButton}>Edit</Text>
                 </TouchableOpacity>
                 <Text style={styles.chcked}>{item.tag}</Text>
-          <Text style={styles.catageryType}>{item.category}</Text>
+          <Text style={styles.catagoryType}>{item.category}</Text>
               </View>
               </View>
               <View>
@@ -86,7 +86,6 @@ class Profile extends Component{
           )}
           />
         </View>
-        </ScrollView>
       </View> 
     );
   }    
@@ -96,8 +95,7 @@ const styles = StyleSheet.create({
     fontSize: 25,  
     textAlign: 'center',  
     margin: 10,
-    fontWeight: "bold",
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     color: '#ffffff'
   },
   headerBar:{
@@ -121,15 +119,12 @@ const styles = StyleSheet.create({
     paddingBottom: 30
   },
   textName:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 20,
-    fontWeight: "bold",
     marginTop: 20
   },
   regionText:{
-    fontFamily: 'Montserrat',
-    flexDirection: "row",
-    fontSize: 13
+    flexDirection: "row"
   },
   settingRegion:{
     flexDirection: "row",
@@ -153,16 +148,15 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   typePost:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Regular',
     fontSize: 13
   },
   userName:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 16,
-    fontWeight: "bold"
   },
   datePost:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Regular',
     fontSize: 11,
     marginTop: 5
   },
@@ -173,24 +167,21 @@ const styles = StyleSheet.create({
     fontSize: 100
   },
   editButton:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     color: '#B14297',
-    fontWeight: "bold",
     marginBottom: 5,
     fontSize: 11,
     marginLeft: 20
   },
   chcked:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     color: '#B14297',
-    fontWeight: "bold",
     marginBottom: 5,
     fontSize: 11
   },
-  catageryType:{
-    fontFamily: 'Montserrat',
+  categoryType:{
+    fontFamily: 'Montserrat-Bold',
     color: '#000000',
-    fontWeight: "bold",
     marginBottom: 5,
     fontSize: 11
   }

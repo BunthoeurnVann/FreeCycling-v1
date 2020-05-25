@@ -17,14 +17,13 @@ class MessageChat extends Component{
  ]} 
   render(){
     return (  
-      <View>  
+      <View style={{marginBottom: 270}}>  
         <View style={styles.headerBar}>
           <Text style={styles.textHeader}>Chat</Text>
         </View>
         <View>
           <TextInput style={styles.inputSearch} placeholder="Search"/>
         </View>
-        <ScrollView>
         <View>
           <FlatList
           keyExtractor = {(item)=>item.id}
@@ -42,7 +41,6 @@ class MessageChat extends Component{
           )}
           />
         </View>
-        </ScrollView>
       </View> 
     );
   }    
@@ -52,8 +50,7 @@ const styles = StyleSheet.create({
     fontSize: 25,  
     textAlign: 'center',  
     margin: 10,
-    fontWeight: "bold",
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     color: '#ffffff'
   },
   headerBar:{
@@ -66,7 +63,7 @@ const styles = StyleSheet.create({
     height: 36,
     borderRadius: 17,
     borderColor: '#707070',
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Regular',
     margin: 20,
     paddingHorizontal: 20,
     justifyContent: "center",
@@ -78,19 +75,18 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   itemName:{
-    fontFamily: 'Montserrat',
+    fontFamily: 'Montserrat-Bold',
     fontSize: 16,
-    fontWeight: "bold",
     color: '#707070'
   },
   itemTitle:{
-    fontFamily: 'Regular',
+    fontFamily: 'Montserrat-Regular',
     fontSize: 14,
     color: '#707070'
   },
   itemDate:{
     marginTop: 20,
-    fontFamily: 'Regular',
+    fontFamily: 'Montserrat-Regular',
     fontSize: 11,
     color: '#707070'
   }

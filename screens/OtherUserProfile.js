@@ -60,7 +60,7 @@ export default class OtherUserProfile extends Component {
                                             <Text style={styles.colorType}>.</Text>
                                         </View>
                                         <View>
-                                            <Text style={styles.catageryType}>{item.category}</Text>
+                                            <Text style={styles.categoryType}>{item.category}</Text>
                                         </View>
                                     </View>
                                     <View>
@@ -94,8 +94,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: 'center',
         margin: 10,
-        fontWeight: "bold",
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Bold',
         color: '#ffffff'
     },
     headerBar: {
@@ -119,15 +118,12 @@ const styles = StyleSheet.create({
         paddingBottom: 30
     },
     textName: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Bold',
         fontSize: 20,
-        fontWeight: "bold",
         marginTop: 20
     },
     regionText: {
-        fontFamily: 'Montserrat',
         flexDirection: "row",
-        fontSize: 13
     },
     settingRegion: {
         flexDirection: "row",
@@ -140,16 +136,15 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     typePost: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
         fontSize: 13
     },
     userName: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Bold',
         fontSize: 16,
-        fontWeight: "bold"
     },
     datePost: {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
         fontSize: 11,
         marginTop: 5
     },
@@ -159,10 +154,9 @@ const styles = StyleSheet.create({
         color: '#97CACA',
         fontSize: 100
     },
-    catageryType: {
-        fontFamily: 'Montserrat',
+    categoryType: {
+        fontFamily: 'Montserrat-Bold',
         color: '#000000',
-        fontWeight: "bold",
         fontSize: 11,
         marginTop: 3
     },
@@ -170,7 +164,7 @@ const styles = StyleSheet.create({
         height: 36,
         borderRadius: 17,
         borderColor: '#707070',
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
         paddingHorizontal: 20,
         justifyContent: "center",
         borderWidth: 1,
